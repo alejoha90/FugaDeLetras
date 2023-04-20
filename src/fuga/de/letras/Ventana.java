@@ -38,16 +38,17 @@ public class Ventana extends javax.swing.JFrame {
         setTitle("FUGA DE LETRAS.");
         setBackground(new java.awt.Color(188, 242, 183));
         setPreferredSize(new java.awt.Dimension(300, 300));
+        setResizable(false);
 
         jLabel2.setFont(new java.awt.Font("Arial Narrow", 1, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("FUGA DE LETRAS");
 
-        btnJugar.setBackground(new java.awt.Color(139, 218, 220));
+        btnJugar.setBackground(new java.awt.Color(255, 242, 204));
         btnJugar.setFont(new java.awt.Font("Arial Narrow", 1, 24)); // NOI18N
         btnJugar.setText("JUGAR");
 
-        btnInstrucciones.setBackground(new java.awt.Color(139, 218, 220));
+        btnInstrucciones.setBackground(new java.awt.Color(255, 242, 204));
         btnInstrucciones.setFont(new java.awt.Font("Arial Narrow", 1, 24)); // NOI18N
         btnInstrucciones.setText("INSTRUCCIONES");
 
@@ -57,7 +58,7 @@ public class Ventana extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(137, 137, 137)
-                .addComponent(btnJugar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnJugar, javax.swing.GroupLayout.DEFAULT_SIZE, 579, Short.MAX_VALUE)
                 .addGap(138, 138, 138))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(91, 91, 91)
@@ -74,15 +75,15 @@ public class Ventana extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(41, 41, 41)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
                 .addGap(50, 50, 50)
-                .addComponent(btnJugar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnJugar, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
                 .addGap(64, 64, 64)
-                .addComponent(btnInstrucciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnInstrucciones, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
                 .addGap(111, 111, 111))
         );
 
-        setBounds(0, 0, 389, 374);
+        setBounds(0, 0, 868, 487);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
