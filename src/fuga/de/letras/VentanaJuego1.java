@@ -16,6 +16,8 @@ public class VentanaJuego1 extends javax.swing.JFrame {
     public VentanaJuego1() {
         initComponents();
     }
+    
+    Jugador datosjJugador = new Jugador();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,7 +29,7 @@ public class VentanaJuego1 extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        texNombre = new javax.swing.JTextArea();
+        txtNombre = new javax.swing.JTextArea();
         lblNombre = new javax.swing.JLabel();
         lblTematica = new javax.swing.JLabel();
         btnAnimales = new javax.swing.JButton();
@@ -38,8 +40,9 @@ public class VentanaJuego1 extends javax.swing.JFrame {
         setTitle("FUGA DE LETRAS.");
         setResizable(false);
 
-        texNombre.setFont(new java.awt.Font("Arial Narrow", 0, 32)); // NOI18N
-        jScrollPane1.setViewportView(texNombre);
+        txtNombre.setFont(new java.awt.Font("Arial Narrow", 0, 32)); // NOI18N
+        jScrollPane1.setViewportView(txtNombre);
+        txtNombre.getAccessibleContext().setAccessibleParent(null);
 
         lblNombre.setFont(new java.awt.Font("Arial Narrow", 1, 18)); // NOI18N
         lblNombre.setText("NOMBRE.");
@@ -92,16 +95,14 @@ public class VentanaJuego1 extends javax.swing.JFrame {
                         .addGap(390, 390, 390)
                         .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
+                        .addGap(117, 117, 117)
                         .addComponent(btnAnimales, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(123, 123, 123)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblTematica)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(btnColores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(lblTematica)))
+                                .addGap(13, 13, 13)))
                         .addGap(63, 63, 63)
                         .addComponent(btnFrutas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(117, Short.MAX_VALUE))
@@ -132,6 +133,9 @@ public class VentanaJuego1 extends javax.swing.JFrame {
         newframeJuego2.setVisible(true);    //usando el frame inicia VentanaJuego2
         
         this.dispose();     //evita acomulacion de ventanas
+        
+        datosjJugador.obtenerNombre();      //obtiene nombre del jugador
+        datosjJugador.imprimirDato();       //muestra mensaje de confimacion de nombre
     }//GEN-LAST:event_btnAnimalesActionPerformed
 
     private void btnFrutasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFrutasActionPerformed
@@ -140,6 +144,9 @@ public class VentanaJuego1 extends javax.swing.JFrame {
         newframeJuego2.setVisible(true);    //usando el frame inicia VentanaJuego2
         
         this.dispose();     //evita acomulacion de ventanas
+        
+        datosjJugador.obtenerNombre();      //obtiene nombre del jugador
+        datosjJugador.imprimirDato();       //muestra mensaje de confimacion de nombre
     }//GEN-LAST:event_btnFrutasActionPerformed
 
     private void btnColoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColoresActionPerformed
@@ -148,6 +155,9 @@ public class VentanaJuego1 extends javax.swing.JFrame {
         newframeJuego2.setVisible(true);    //usando el frame inicia VentanaJuego2
         
         this.dispose();     //evita acomulacion de ventanas
+        
+        datosjJugador.obtenerNombre();      //obtiene nombre del jugador
+        datosjJugador.imprimirDato();       //muestra mensaje de confimacion de nombre
     }//GEN-LAST:event_btnColoresActionPerformed
 
     /**
@@ -192,6 +202,6 @@ public class VentanaJuego1 extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblNombre;
     private javax.swing.JLabel lblTematica;
-    private javax.swing.JTextArea texNombre;
+    public static javax.swing.JTextArea txtNombre;
     // End of variables declaration//GEN-END:variables
 }

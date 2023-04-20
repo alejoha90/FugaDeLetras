@@ -8,16 +8,16 @@ package fuga.de.letras;
  *
  * @author Alejandro
  */
-public class FugaDeLetras {
+public class Main {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-    Ventana v1 = new Ventana();
-    v1.setSize(500,500);
-    v1.setLocationRelativeTo(null);
-    v1.setVisible(true);
+        
+        Ventana v1 = new Ventana();
+        v1.setLocationRelativeTo(null);
+        v1.setVisible(true);
     }
     
 }
