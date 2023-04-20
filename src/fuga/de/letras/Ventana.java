@@ -47,10 +47,20 @@ public class Ventana extends javax.swing.JFrame {
         btnJugar.setBackground(new java.awt.Color(255, 242, 204));
         btnJugar.setFont(new java.awt.Font("Arial Narrow", 1, 24)); // NOI18N
         btnJugar.setText("JUGAR");
+        btnJugar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnJugarActionPerformed(evt);
+            }
+        });
 
         btnInstrucciones.setBackground(new java.awt.Color(255, 242, 204));
         btnInstrucciones.setFont(new java.awt.Font("Arial Narrow", 1, 24)); // NOI18N
         btnInstrucciones.setText("INSTRUCCIONES");
+        btnInstrucciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInstruccionesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -85,6 +95,22 @@ public class Ventana extends javax.swing.JFrame {
 
         setBounds(0, 0, 868, 487);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnInstruccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInstruccionesActionPerformed
+        VentanaInstrucciones newframe = new VentanaInstrucciones(); // crea frame para iniciar ventanaInstrucciones  con el boton instrucciones
+        
+        newframe.setVisible(true);  //usando el frame antes creado se inicia la ventana
+        
+        this.dispose(); //evita acomulacion de ventanas
+    }//GEN-LAST:event_btnInstruccionesActionPerformed
+
+    private void btnJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugarActionPerformed
+        VentanaJuego1 newframeVentanaJuego1 = new VentanaJuego1(); // crea frame para iniciar ventanaJuego1  con el boton JUGAR
+        
+        newframeVentanaJuego1.setVisible(true); //usando el frame antes creado se inicia la ventana
+        
+        this.dispose(); //evita acomulacion de ventanas
+    }//GEN-LAST:event_btnJugarActionPerformed
 
     /**
      * @param args the command line arguments

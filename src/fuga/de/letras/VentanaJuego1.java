@@ -92,17 +92,19 @@ public class VentanaJuego1 extends javax.swing.JFrame {
                         .addGap(390, 390, 390)
                         .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(128, 128, 128)
+                        .addGap(79, 79, 79)
+                        .addComponent(btnAnimales, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(123, 123, 123)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnAnimales, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
                                 .addComponent(btnColores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE))
-                            .addComponent(lblTematica))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(lblTematica)))
                         .addGap(63, 63, 63)
                         .addComponent(btnFrutas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,15 +127,27 @@ public class VentanaJuego1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAnimalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnimalesActionPerformed
-        // TODO add your handling code here:
+        VentanaJuego2 newframeJuego2 = new VentanaJuego2();     //crea frame para iniciar VentanaJuego2
+        
+        newframeJuego2.setVisible(true);    //usando el frame inicia VentanaJuego2
+        
+        this.dispose();     //evita acomulacion de ventanas
     }//GEN-LAST:event_btnAnimalesActionPerformed
 
     private void btnFrutasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFrutasActionPerformed
-        // TODO add your handling code here:
+        VentanaJuego2 newframeJuego2 = new VentanaJuego2();     //crea frame para iniciar VentanaJuego2
+        
+        newframeJuego2.setVisible(true);    //usando el frame inicia VentanaJuego2
+        
+        this.dispose();     //evita acomulacion de ventanas
     }//GEN-LAST:event_btnFrutasActionPerformed
 
     private void btnColoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColoresActionPerformed
-        // TODO add your handling code here:
+        VentanaJuego2 newframeJuego2 = new VentanaJuego2();     //crea frame para iniciar VentanaJuego2
+        
+        newframeJuego2.setVisible(true);    //usando el frame inicia VentanaJuego2
+        
+        this.dispose();     //evita acomulacion de ventanas
     }//GEN-LAST:event_btnColoresActionPerformed
 
     /**

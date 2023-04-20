@@ -49,6 +49,11 @@ public class VentanaInstrucciones extends javax.swing.JFrame {
         jScrollPane2.setViewportView(texInstrucciones);
 
         btnAtras.setText("ATRAS");
+        btnAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtrasActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -79,6 +84,14 @@ public class VentanaInstrucciones extends javax.swing.JFrame {
 
         setBounds(0, 0, 868, 487);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        Ventana newframeVentana = new Ventana();
+        
+        newframeVentana.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_btnAtrasActionPerformed
 
     /**
      * @param args the command line arguments
