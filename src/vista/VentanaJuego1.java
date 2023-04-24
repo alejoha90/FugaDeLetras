@@ -2,8 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package fuga.de.letras;
+package vista;
 
+import eventos.Jugador;
+import eventos.Palabras;
 import java.util.Random;
 
 /**
@@ -20,6 +22,11 @@ public class VentanaJuego1 extends javax.swing.JFrame {
     }
     
     Jugador datosjJugador = new Jugador();
+    Palabras palabra = new Palabras();
+    VentanaJuego2 v2 = new VentanaJuego2();
+    VentanaEstadisticas ventanaes = new VentanaEstadisticas();
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -44,7 +51,6 @@ public class VentanaJuego1 extends javax.swing.JFrame {
 
         txtNombre.setFont(new java.awt.Font("Arial Narrow", 0, 32)); // NOI18N
         jScrollPane1.setViewportView(txtNombre);
-        txtNombre.getAccessibleContext().setAccessibleParent(null);
 
         lblNombre.setFont(new java.awt.Font("Arial Narrow", 1, 18)); // NOI18N
         lblNombre.setText("NOMBRE.");
@@ -56,9 +62,9 @@ public class VentanaJuego1 extends javax.swing.JFrame {
         btnAnimales.setBackground(new java.awt.Color(255, 213, 231));
         btnAnimales.setFont(new java.awt.Font("Arial Narrow", 1, 24)); // NOI18N
         btnAnimales.setText("ANIMALES");
-        btnAnimales.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAnimalesActionPerformed(evt);
+        btnAnimales.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnAnimalesMousePressed(evt);
             }
         });
 
@@ -66,9 +72,9 @@ public class VentanaJuego1 extends javax.swing.JFrame {
         btnColores.setFont(new java.awt.Font("Arial Narrow", 1, 24)); // NOI18N
         btnColores.setText("COLORES");
         btnColores.setPreferredSize(new java.awt.Dimension(150, 50));
-        btnColores.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnColoresActionPerformed(evt);
+        btnColores.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnColoresMousePressed(evt);
             }
         });
 
@@ -77,9 +83,9 @@ public class VentanaJuego1 extends javax.swing.JFrame {
         btnFrutas.setText("FRUTAS");
         btnFrutas.setMinimumSize(new java.awt.Dimension(93, 28));
         btnFrutas.setPreferredSize(new java.awt.Dimension(150, 50));
-        btnFrutas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnFrutasActionPerformed(evt);
+        btnFrutas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnFrutasMousePressed(evt);
             }
         });
 
@@ -99,12 +105,10 @@ public class VentanaJuego1 extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(117, 117, 117)
                         .addComponent(btnAnimales, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(86, 86, 86)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btnColores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(lblTematica)))
+                            .addComponent(lblTematica))
                         .addGap(63, 63, 63)
                         .addComponent(btnFrutas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(117, Short.MAX_VALUE))
@@ -129,7 +133,7 @@ public class VentanaJuego1 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAnimalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnimalesActionPerformed
+    private void btnAnimalesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAnimalesMousePressed
         VentanaJuego2 newframeJuego2 = new VentanaJuego2();     //crea frame para iniciar VentanaJuego2
         
         newframeJuego2.setVisible(true);    //usando el frame inicia VentanaJuego2
@@ -138,9 +142,12 @@ public class VentanaJuego1 extends javax.swing.JFrame {
         
         datosjJugador.obtenerNombre();      //obtiene nombre del jugador
         datosjJugador.imprimirDato();       //muestra mensaje de confimacion de nombre
-    }//GEN-LAST:event_btnAnimalesActionPerformed
+        
+        VentanaJuego2.actualizarPalabra(palabra.seleccionAnimal());
+        
+    }//GEN-LAST:event_btnAnimalesMousePressed
 
-    private void btnFrutasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFrutasActionPerformed
+    private void btnColoresMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnColoresMousePressed
         VentanaJuego2 newframeJuego2 = new VentanaJuego2();     //crea frame para iniciar VentanaJuego2
         
         newframeJuego2.setVisible(true);    //usando el frame inicia VentanaJuego2
@@ -149,9 +156,11 @@ public class VentanaJuego1 extends javax.swing.JFrame {
         
         datosjJugador.obtenerNombre();      //obtiene nombre del jugador
         datosjJugador.imprimirDato();       //muestra mensaje de confimacion de nombre
-    }//GEN-LAST:event_btnFrutasActionPerformed
+        
+        VentanaJuego2.actualizarPalabra(palabra.seleccionColor());
+    }//GEN-LAST:event_btnColoresMousePressed
 
-    private void btnColoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColoresActionPerformed
+    private void btnFrutasMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFrutasMousePressed
         VentanaJuego2 newframeJuego2 = new VentanaJuego2();     //crea frame para iniciar VentanaJuego2
         
         newframeJuego2.setVisible(true);    //usando el frame inicia VentanaJuego2
@@ -160,7 +169,9 @@ public class VentanaJuego1 extends javax.swing.JFrame {
         
         datosjJugador.obtenerNombre();      //obtiene nombre del jugador
         datosjJugador.imprimirDato();       //muestra mensaje de confimacion de nombre
-    }//GEN-LAST:event_btnColoresActionPerformed
+        
+        VentanaJuego2.actualizarPalabra(palabra.seleccionFruta());
+    }//GEN-LAST:event_btnFrutasMousePressed
 
     /**
      * @param args the command line arguments
@@ -187,6 +198,7 @@ public class VentanaJuego1 extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(VentanaJuego1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

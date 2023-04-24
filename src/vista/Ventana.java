@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package fuga.de.letras;
+package vista;
 
 /**
  *
@@ -37,7 +37,6 @@ public class Ventana extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("FUGA DE LETRAS.");
         setBackground(new java.awt.Color(188, 242, 183));
-        setPreferredSize(new java.awt.Dimension(300, 300));
         setResizable(false);
 
         jLabel2.setFont(new java.awt.Font("Arial Narrow", 1, 24)); // NOI18N
@@ -137,6 +136,7 @@ public class Ventana extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Ventana.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
